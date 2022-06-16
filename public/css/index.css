@@ -1,0 +1,134 @@
+body {
+    /*background-color: #FAF0E5;*/
+    background-color: #FBF2E5;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yum {
+    display: flex;
+    justify-content: center;
+}
+
+.letter {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: #FAF0E5;
+}
+
+.linky {
+    /* color: #FAF0E5; */
+    color: #FBF2E5;
+}
+
+a:visited {
+    /* color: #FAF0E5; */
+    color: #FBF2E5;
+}
+
+.linxlink {
+    color: black;
+    font-size: x-large;
+}
+
+.linxlink:visited {
+    color:black;
+}
+
+/* iPhone Portrait */
+@media screen and (min-width: 428px) {
+    img {
+        width: 100%;
+    }
+
+    .message {
+        background: -webkit-linear-gradient(90deg, rgba(236,0,193,1) 31%, rgba(0,212,255,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: x-large;
+        inline-size: 400px; 
+        overflow-wrap: break-word;
+    }
+}
+
+/* iPhone Landscape */
+@media screen and (min-width: 926px) {
+    img {
+        width: 60%;
+    }
+
+    .message {
+        background: -webkit-linear-gradient(90deg, rgba(236,0,193,1) 31%, rgba(0,212,255,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: x-large;
+        inline-size: 700px; 
+        overflow-wrap: break-word;
+    }
+}
+
+/* iPad Portrait */
+@media screen and (min-width: 810px) {
+    img {
+        width: 70%;
+    }
+
+    .message {
+        background: -webkit-linear-gradient(90deg, rgba(236,0,193,1) 31%, rgba(0,212,255,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: x-large;
+        inline-size: 700px; 
+        overflow-wrap: break-word;
+    }
+}
+
+/* iPad Landscape */
+@media screen and (min-width: 1080px) {
+    img {
+        width: 70%;
+    }
+
+    .message {
+        background: -webkit-linear-gradient(90deg, rgba(236,0,193,1) 31%, rgba(0,212,255,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: x-large;
+        inline-size: 900px; 
+        overflow-wrap: break-word;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .message {
+        background: -webkit-linear-gradient(90deg, rgba(236,0,193,1) 31%, rgba(0,212,255,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: x-large;
+        inline-size: 1200px; 
+        overflow-wrap: break-word;
+    }
+    
+    img {
+        width: 55%;
+    }
+}
