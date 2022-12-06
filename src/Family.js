@@ -1,0 +1,51 @@
+export const Family = [
+  {
+    id: 1,
+    name: "Sunflower",
+    imgfile: "sunflower1",
+    role: "Mom",
+    bgcolor: "#fef2e6",
+  },
+  {
+    id: 2,
+    name: "Sunflower",
+    imgfile: "sunflower2",
+    role: "Mom",
+    bgcolor: "#fff0e7",
+  },
+  {
+    id: 3,
+    name: "Biscuit",
+    imgfile: "biscuit1",
+    role: "Dad",
+    bgcolor: "#fbf0e4",
+  },
+  {
+    id: 4,
+    name: "Biscuit",
+    imgfile: "biscuit2",
+    role: "Dad",
+    bgcolor: "#fef2e6",
+  },
+  {
+    id: 5,
+    name: "Pusheen",
+    imgfile: "pusheen",
+    role: "Big Sister",
+    bgcolor: "#fcf0e4",
+  },
+  {
+    id: 6,
+    name: "Stormy",
+    imgfile: "stormy",
+    role: "Little Sister",
+    bgcolor: "white",
+  },
+  {
+    id: 7,
+    name: "Pip",
+    imgfile: "pip",
+    role: "Little Brother",
+    bgcolor: "white",
+  },
+];
