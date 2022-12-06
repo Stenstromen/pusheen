@@ -25,7 +25,7 @@ export const Family = [
     name: "Biscuit",
     imgfile: "biscuit2",
     role: "Dad",
-    bgcolor: "#fef2e6",
+    bgcolor: "#f7f7f7",
   },
   {
     id: 5,
