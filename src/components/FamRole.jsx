@@ -1,5 +1,14 @@
 function FamRole({ role }) {
-  return <h3>{role}</h3>;
+  return (
+    <p
+      style={{
+        fontSize: "19px",
+        fontWeight: "bold",
+      }}
+    >
+      {role}
+    </p>
+  );
 }
 
 export default FamRole;
