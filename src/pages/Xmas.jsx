@@ -7,6 +7,9 @@ function Xmas({ isMobile }) {
     return document.documentElement.style.setProperty("--bodyColor", "#fbf0e3");
   });
 
+  const origin = window.location.origin;
+  const xmaskitty = `${origin}/fam/xmaskitty`;
+
   return (
     <div
       style={{
@@ -17,7 +20,7 @@ function Xmas({ isMobile }) {
       }}
     >
       <NameHeader name="X-Mas kitty" />
-      <ImageBody image="xmaskitty" isMobile={isMobile} />
+      <ImageBody image={xmaskitty} isMobile={isMobile} />
     </div>
   );
 }
