@@ -1,5 +1,6 @@
 import React from "react";
 import { Family } from "../Family";
+import { Helmet } from "react-helmet";
 
 function All() {
   return (
@@ -13,6 +14,10 @@ function All() {
         height: "100vh",
       }}
     >
+      <Helmet>
+        <meta name="theme-color" content="#fbf0e3" />
+        <title>Family Tree | Pusheen.se</title>
+      </Helmet>
       <h1>The Whole Family 😸</h1>
       <table>
         <thead>
@@ -29,9 +34,14 @@ function All() {
                 <td>{item.name}</td>
                 <td>{item.role}</td>
                 <td>
-                  <a style={{
-                    color: "red",
-                  }} href={`/${item.id}`}>{item.name} --&gt;</a>
+                  <a
+                    style={{
+                      color: "red",
+                    }}
+                    href={`/${item.id}`}
+                  >
+                    {item.name} --&gt;
+                  </a>
                 </td>
               </tr>
             );

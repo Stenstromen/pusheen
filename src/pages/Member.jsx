@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { Helmet } from "react-helmet";
 import { Family } from "../Family";
 import NameHeader from "../components/NameHeader";
 import ImageBody from "../components/ImageBody";
@@ -32,6 +33,16 @@ function Member({ isMobile }) {
         const url = `${origin}/fam/${item?.imgfile}`;
         return (
           <div key={item?.id}>
+            <Helmet>
+              <meta name="theme-color" content={item?.bgcolor} />
+              <meta
+                property="og:image"
+                content={"fam/" + item?.imgfile + ".webp"}
+              />
+              <meta property="og:image:width" content={item?.width} />
+              <meta property="og:image:height" content={item?.height} />
+              <title>{item?.name} | Pusheen.se</title>
+            </Helmet>
             <NameHeader name={item?.name} />
             <ImageBody image={url} isMobile={isMobile} />
             <FamRole role={item?.role} />

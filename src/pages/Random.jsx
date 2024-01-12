@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "../App.css";
 import { Family } from "../Family";
 import NameHeader from "../components/NameHeader";
@@ -39,6 +40,16 @@ function Random({ isMobile }) {
         {randomCat.map((item) => {
           return (
             <div key={item.id}>
+              <Helmet>
+                <meta name="theme-color" content={item.bgcolor} />
+                <meta
+                  property="og:image"
+                  content={"fam/" + item.imgfile + ".webp"}
+                />
+                <meta property="og:image:width" content={item.width} />
+                <meta property="og:image:height" content={item.height} />
+                <title>{item.name} | Pusheen.se</title>
+              </Helmet>
               <NameHeader name={item.name} />
               <ImageBody image={"fam/" + item.imgfile} isMobile={isMobile} />
               <FamRole role={item.role} />
