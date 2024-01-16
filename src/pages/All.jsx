@@ -1,5 +1,5 @@
 import React from "react";
-import { Family } from "../Family";
+import Family from "../Family";
 import { Helmet } from "react-helmet";
 
 function All() {
@@ -28,7 +28,7 @@ function All() {
           </tr>
         </thead>
         <tbody>
-          {Family.map((item) => {
+          {Family?.map((item) => {
             return (
               <tr key={item.id}>
                 <td>{item.name}</td>

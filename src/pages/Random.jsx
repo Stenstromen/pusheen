@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import "../App.css";
-import { Family } from "../Family";
+import Family from "../Family";
 import NameHeader from "../components/NameHeader";
 import ImageBody from "../components/ImageBody";
 import FamRole from "../components/FamRole";
@@ -13,7 +13,7 @@ function Random({ isMobile }) {
   useEffect(() => {
     return setRandomCat((randomCat) => [
       ...randomCat,
-      Family[Math.floor(Family.length * Math.random())],
+      Family[Math.floor(Family?.length * Math.random())],
     ]);
   }, []);
 
@@ -37,7 +37,7 @@ function Random({ isMobile }) {
           textAlign: "center",
         }}
       >
-        {randomCat.map((item) => {
+        {randomCat?.map((item) => {
           return (
             <div key={item.id}>
               <Helmet>
@@ -57,7 +57,7 @@ function Random({ isMobile }) {
           );
         })}
       </div>
-      {Family.map((item) => {
+      {Family?.map((item) => {
         return (
           <a href={`/${item.id}`} key={item.id} aria-label={item.name}></a>
         );

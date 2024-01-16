@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Helmet } from "react-helmet";
-import { Family } from "../Family";
+import Family from "../Family";
 import NameHeader from "../components/NameHeader";
 import ImageBody from "../components/ImageBody";
 import FamRole from "../components/FamRole";
@@ -28,7 +28,7 @@ function Member({ isMobile }) {
         textAlign: "center",
       }}
     >
-      {cat.map((item) => {
+      {cat?.map((item) => {
         const origin = window.location.origin;
         const url = `${origin}/fam/${item?.imgfile}`;
         return (
