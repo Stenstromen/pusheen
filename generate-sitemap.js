@@ -9,6 +9,8 @@ const createSitemapContent = (Family) => {
   xmlContent += `   <url>\n      <loc>https://pusheen.se</loc>\n      <lastmod>${currentDate}</lastmod>\n      <changefreq>monthly</changefreq>\n      <priority>0.8</priority>\n   </url>\n`;
 
   xmlContent += `   <url>\n      <loc>https://pusheen.se/all</loc>\n      <lastmod>${currentDate}</lastmod>\n      <changefreq>monthly</changefreq>\n      <priority>0.8</priority>\n   </url>\n`;
+  
+  xmlContent += `   <url>\n      <loc>https://pusheen.se/xmas</loc>\n      <lastmod>${currentDate}</lastmod>\n      <changefreq>monthly</changefreq>\n      <priority>0.8</priority>\n   </url>\n`;
 
   Family.forEach((member) => {
     const lastmod = currentDate;
