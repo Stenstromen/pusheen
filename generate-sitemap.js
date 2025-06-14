@@ -1,6 +1,6 @@
-const Family = require("./src/Family");
-const fs = require("fs");
-const path = require("path");
+import Family from "./src/Family.js";
+import fs from "fs";
+import path from "path";
 
 const createSitemapContent = (Family) => {
   const currentDate = new Date().toISOString().split("T")[0];

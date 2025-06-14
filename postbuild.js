@@ -1,7 +1,10 @@
-/* eslint-disable no-undef */
-const fs = require("fs");
-const path = require("path");
-const Family = require("./src/Family");
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import Family from './src/Family.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const buildDir = path.join(__dirname, "build");
 

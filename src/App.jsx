@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={import.meta.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Random isMobile={isMobile} />} />
           <Route path="/:id" element={<Member isMobile={isMobile} />} />
