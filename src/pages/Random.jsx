@@ -57,13 +57,6 @@ function Random({ isMobile }) {
           );
         })}
       </div>
-      {Family?.map((item) => {
-        return (
-          <a href={`/${item.id}`} key={item.id} aria-label={item.name}></a>
-        );
-      })}
-      <a href="/all" aria-label="all"></a>
-      <a href="/xmas" aria-label="xmas"></a>
     </>
   );
 }

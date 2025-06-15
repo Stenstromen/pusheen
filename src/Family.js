@@ -64,4 +64,4 @@ const Family = [
   },
 ];
 
-module.exports = Family;
+export default Family;
