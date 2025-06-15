@@ -13,17 +13,13 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "purgecss": "^6.0.0",
-    "react-snap": "^1.23.0",
-    "vite": "^6.0.13"
+    "vite": "^6.0.13",
+    "html-minifier-terser": "^7.2.0"
   },
   "scripts": {
     "dev": "vite",
     "build": "node generate-sitemap.js && vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "postbuild": "react-snap && purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css && node postbuild.js"
-  },
-  "reactSnap": {
-    "inlineCss": true
+    "test": "vitest"
   }
 }
