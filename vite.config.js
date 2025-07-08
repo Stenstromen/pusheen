@@ -163,7 +163,7 @@ const findAssetPaths = (buildDir) => {
   }
 };
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   // Check if we're running in test mode
   const isTest = mode === "test";
 
@@ -178,7 +178,7 @@ export default defineConfig(({ command, mode }) => {
         order: "post",
         handler: async () => {
           try {
-            const buildDir = resolve(__dirname, "build");
+            const buildDir = resolve(process.cwd(), "build");
             const { cssPath, jsPath } = findAssetPaths(buildDir);
 
             console.log(`Found asset paths - CSS: ${cssPath}, JS: ${jsPath}`);

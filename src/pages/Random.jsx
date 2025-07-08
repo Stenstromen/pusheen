@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import "../App.css";
@@ -62,3 +62,7 @@ function Random({ isMobile }) {
 }
 
 export default Random;
+
+Random.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

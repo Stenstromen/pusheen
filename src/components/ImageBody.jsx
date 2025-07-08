@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 
 function ImageBody({ image, isMobile }) {
@@ -16,3 +17,8 @@ function ImageBody({ image, isMobile }) {
 }
 
 export default ImageBody;
+
+ImageBody.propTypes = {
+  image: PropTypes.string.isRequired,
+  isMobile: PropTypes.bool.isRequired,
+};

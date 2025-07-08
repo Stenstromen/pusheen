@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import NameHeader from "../components/NameHeader";
@@ -34,3 +35,7 @@ function Xmas({ isMobile }) {
 }
 
 export default Xmas;
+
+Xmas.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

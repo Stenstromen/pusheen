@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Helmet } from "react-helmet";
@@ -54,3 +55,7 @@ function Member({ isMobile }) {
 }
 
 export default Member;
+
+Member.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function NameHeader({ name }) {
   return (
     <div>
@@ -7,3 +9,7 @@ function NameHeader({ name }) {
 }
 
 export default NameHeader;
+
+NameHeader.propTypes = {
+  name: PropTypes.string.isRequired,
+};
