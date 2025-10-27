@@ -18,7 +18,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "@vitejs/plugin-react": "^4.7.0",
     "purgecss": "^7.0.2",
-    "vite": "^7.1.1",
+    "vite": "^7.1.12",
     "html-minifier-terser": "^7.2.0"
   },
   "scripts": {
