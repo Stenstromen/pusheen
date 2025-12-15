@@ -11,7 +11,7 @@
     "react-router-dom": "^7.10.1"
   },
   "devDependencies": {
-    "@eslint/create-config": "^1.10.0",
+    "@eslint/create-config": "^1.11.0",
     "@eslint/js": "^9.30.1",
     "eslint": "^9.39.2",
     "eslint-plugin-react": "^7.37.5",
