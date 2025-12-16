@@ -7,15 +7,41 @@ import NameHeader from "../components/NameHeader";
 import ImageBody from "../components/ImageBody";
 import FamRole from "../components/FamRole";
 
+// Cookie utility functions
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+  return null;
+}
+
+function setCookie(name, value, days = 365) {
+  const date = new Date();
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  const expires = `expires=${date.toUTCString()}`;
+  document.cookie = `${name}=${value};${expires};path=/`;
+}
+
 function Random({ isMobile }) {
   const [randomCat, setRandomCat] = useState([]);
 
   useEffect(() => {
+    const lastCatId = getCookie("lastRandomCat");
+    const lastCatIdNum = lastCatId ? parseInt(lastCatId, 10) : null;
+
+    const availableCats = Family.filter(
+      (cat) => cat.id !== lastCatIdNum
+    );
+
+    const catsToChooseFrom =
+      availableCats.length > 0 ? availableCats : Family;
+    const randomIndex = Math.floor(catsToChooseFrom.length * Math.random());
+    const selectedCat = catsToChooseFrom[randomIndex];
+
+    setCookie("lastRandomCat", selectedCat.id.toString());
+
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    return setRandomCat((randomCat) => [
-      ...randomCat,
-      Family[Math.floor(Family?.length * Math.random())],
-    ]);
+    return setRandomCat([selectedCat]);
   }, []);
 
   useEffect(() => {
