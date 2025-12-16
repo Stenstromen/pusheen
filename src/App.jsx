@@ -17,6 +17,7 @@ function App() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     return window.innerWidth < 425 ? setIsMobile(true) : setIsMobile(false);
   }, []);
 

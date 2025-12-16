@@ -1,6 +1,6 @@
 import React from "react";
 import Family from "../Family";
-import { Helmet } from "react-helmet";
+import Helmet from "../components/Helmet";
 
 function All() {
   return (
