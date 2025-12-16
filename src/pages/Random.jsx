@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import Helmet from "../components/Helmet";
 import "../App.css";
 import Family from "../Family";
 import NameHeader from "../components/NameHeader";
@@ -11,6 +11,7 @@ function Random({ isMobile }) {
   const [randomCat, setRandomCat] = useState([]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     return setRandomCat((randomCat) => [
       ...randomCat,
       Family[Math.floor(Family?.length * Math.random())],

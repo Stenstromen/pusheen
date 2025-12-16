@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import Helmet from "../components/Helmet";
 import NameHeader from "../components/NameHeader";
 import ImageBody from "../components/ImageBody";
 

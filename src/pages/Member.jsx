@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { Helmet } from "react-helmet";
+import Helmet from "../components/Helmet";
 import Family from "../Family";
 import NameHeader from "../components/NameHeader";
 import ImageBody from "../components/ImageBody";
